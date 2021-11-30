@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'icones';
+    src: url("/assets/font/icones.ttf");
+}
+
+body {
+    background-color:#1D232A;
+    font-family: 'Open Sans','icones', sans-serif;
+    color: white;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #15191C;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+.cabecalho_menu i::before{
+    content: "\e904";
+    font-size: 24px;
+}
+
+.cabecalho_icone{
+    width: 40px;
+}
+
+.cabecalho_notificacao i::before{
+    content: "\e906";
+    font-size: 24px;
+}
+
+.menu-lateral{
+    display: flex;
+    flex-direction: column;
+    background-color: #15191C;
+    /*vw é a largura de view port*/
+    width: 75vw;
+    height: 100vh;
+
+    position: absolute;
+    left: -100vw;
+    transition: 0.5s;
+}
+
+
+.menu-lateral--ativo{
+    left: 0;
+    transition: 0.5s;
+}
+
+.menu-lateral_logo{
+    /*align-self para alinhar somente a imagem*/
+    align-self: center;
+    width: 118px;
+}
+
+.menu-lateral_link{
+    width: 64px;
+    padding: 16px;
+    color: #95999C;
+    padding-Left: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-lateral_link--ativo{
+    color: white;
+    padding-left: 56px;
+    border-left: 8px white solid;
+}
+
+.menu-lateral_link::before{
+    content: "\e900";
+    height:24px;
+    width: 24px;
+    font-size: 24px;
+    position: absolute;
+    left: 24px;
+}
+
+.menu-lateral_link--inicio::before{
+    content: "\e902"
+}
+
+.menu-lateral_link--videos::before{
+    content: "\e90e" 
+}
+
+.menu-lateral_link--inicio--Picos::before{
+    content: "\e909"
+}
+
+.menu-lateral_link--integrantes::before{
+    content: "\e903"
+}
+
+.menu-lateral_link--camisas::before{
+    content: "\e900"
+}
+
+.menu-lateral_link--pinturas::before{
+    content: "\e90a"
+}
+
+.principal{
+    padding: 24px 16px
+}
+
+.titulo-pagina{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.cartao{
+    width: 100%;
+    border-radius: 15px;
+    /*para esconder os testos que passem do cartao use overflow: hidden*/
+    overflow: hidden;
+    background-color: #2C343A;
+}
+
+.cartao_conteudo{
+    padding: 16px
+}
+
+.cartao_titulo{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cartao_perfil{
+    color: #95999C;
+    font-size: 0.9rem;
+}
+
+.cartao_info{
+    display: flex;
+    align-items: center;
+    color: #95999C;
+}
+
+.cartao_info-tempo{
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.cartao_info-visualizacao{
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+.cartao_botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.cartao_botao-play::before{
+    content: "\e90b";
+    font-size: 24px;
+}
+
+.cartao_botao-destaque{
+    width: 100%;
+}
+
+.cartao_botao-destaque::before{
+    margin-right: 28px;
+}
